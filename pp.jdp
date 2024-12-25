@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps{
+                git 'https://github.com/aditya1608/AI-Virtual-Mouse.git'
                 echo 'PULL SUCCESS'
             }
         }
