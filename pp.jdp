@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn sonar:sonar   -Dsonar.projectKey=studentapp   -Dsonar.host.url=http://15.206.116.117:9000   -Dsonar.login=sqp_a2538cec1065230821857986ecc892b27e50dfa5'
+                sh 'mvn sonar:sonar   -Dsonar.projectKey=studentapp   -Dsonar.host.url=http://15.206.116.117:9000   -Dsonar.login=sqp_f0e8631541a7a93efd083ae992ff381acc9c1fc7'
             }
         }
         // stage('Test') {
