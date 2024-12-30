@@ -38,7 +38,7 @@ pipeline {
 
         stage('Deliver') {
             steps {
-                sh 'aws s3 cp studentapp.war s3://studentapp-cbz/studentapp.war'
+                sh 'aws s3 cp /var/lib/jenkins/workspace/studentapp/target/studentapp-2.2-SNAPSHOT.war s3://studentapp-cbz/studentapp.war'
             }
         }
     }
