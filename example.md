@@ -12,4 +12,8 @@ Run in Python:
 print('updated')
 ```
 
-```java System.print.ln('Good') ```
+```java 
+System.print.ln('Good') ```
+
+```cpp 
+cout<<'Good' ```
