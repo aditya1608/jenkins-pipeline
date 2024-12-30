@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh '/opt/maven/bin/mvn clean package'
+                sh 'mvn clean package'
             }
         }
         // stage('Test') {
         //     steps {
-        //         sh '/opt/maven/bin/mvn sonar:sonar   -Dsonar.projectKey=studentapp   -Dsonar.host.url=http://18.218.5.157:9000   -Dsonar.login=sqp_b3b4fdd65c93c78b56f77e3dc1399bfb77d0074e'
+        //         sh 'mvn sonar:sonar   -Dsonar.projectKey=studentapp   -Dsonar.host.url=http://18.218.5.157:9000   -Dsonar.login=sqp_b3b4fdd65c93c78b56f77e3dc1399bfb77d0074e'
         //     }
         // }
         stage('Test') {
