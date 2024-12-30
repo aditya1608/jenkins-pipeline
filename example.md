@@ -17,4 +17,5 @@ System.print.ln('Good')
 ```
 
 ```cpp 
-cout<<'Good' ```
+cout<<'Good' 
+```
