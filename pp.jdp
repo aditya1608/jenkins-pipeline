@@ -30,9 +30,15 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
+        // stage('Deploy') {
+        //     steps {
+        //         deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://172.31.3.67:8080')], contextPath: '/', war: '**/*.war'
+        //     }
+        // }
+
+        stage('Deliver') {
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://172.31.3.67:8080')], contextPath: '/', war: '**/*.war'
+                sh 'aws s3 cp studentapp.war s3://studentapp-cbz/studentapp.war'
             }
         }
     }
