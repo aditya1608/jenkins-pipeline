@@ -11,3 +11,5 @@ Run in Python:
 ```python
 print('updated')
 ```
+
+```java System.print.ln('Good') ```
