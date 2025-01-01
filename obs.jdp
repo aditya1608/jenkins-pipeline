@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 withSonarQubeEnv(installationName: 'sonar', credentialsId: 'sonar-cred') {
-                    sh 'mvn sonar:sonar -Dsonar.projectKey=onlinebookstore'
+                    sh 'mvn sonar:sonar -Dsonar.projectKey=obs'
                 }           
             }
         }
