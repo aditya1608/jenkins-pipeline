@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pull') {
+            steps {
+                git 'https://github.com/shubhamkalsait/studentapp-ui.git'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
