@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pull') {
+            steps {
+                git branch: 'main', url: 'https://github.com/aditya1608/CBDevOps.git'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh '''cd aws/
+                      touch s3.txt
+                      echo "Storage" > s3.txt'''
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh '''touch iam.txt
+                      echo "identity" > iam.txt'''
+            }
+        }
+    }
+}
