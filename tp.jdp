@@ -9,8 +9,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''cd aws/
-                      touch s3.txt
-                      echo "Storage" > s3.txt'''
+                      touch cf.txt
+                      echo "Cloudfront" > cf.txt'''
             }
         }
         stage('Deploy') {
