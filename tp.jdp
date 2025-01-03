@@ -15,8 +15,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh '''touch iam.txt
-                      echo "identity" > iam.txt'''
+                sh '''cd aws/
+                      touch rds.txt
+                      echo "database" > rds.txt'''
             }
         }
     }
